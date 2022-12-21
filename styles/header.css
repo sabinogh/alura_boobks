@@ -1,0 +1,165 @@
+.cabecalho__menu-hamburger { /*003*/
+    width: 24px; /*Largura 004*/
+    height: 24px; /*Altura 005*/
+    background-image: url("../img/Menu.svg"); /*Imagem de fundo 006*/
+    background-repeat: no-repeat; /*019*/
+    background-position: center; /*020*/
+    display: inline-block; /*Se fosse inline não iria permitir ajustes alt./larg. 007*/
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburger { /*310*/
+    background-image: url("../img/menu_black_24dp\ 1.svg"); /*311*/
+}
+
+.container__botao:checked ~ .container__rotulo { /*312*/
+    background: var(--azul-degrade); /*313*/
+}
+
+.cabecalho {
+    background-color: var(--branco); /*010*/
+    display: flex; /*Por ser ícones e imagens 011*/
+    justify-content: space-between; /*Separação entre eles 012*/
+    align-items: center; /*013*/
+    position: relative; /*Vide notes! 023*/
+}
+
+.container { /*014*/
+    display: flex; /*015*/
+    align-items: center; /*016*/
+}
+
+.container__imagem { /*017*/
+    padding: 1em; /*018*/
+}
+
+.lista-menu { /*019*/
+    display: none; /*A lista desaparece 020*/
+    position: absolute; /*Vide notes! 024*/
+    top: 100%; /*Ficou 100% abaixo do cabeçalho 025*/
+    width: 60vw; /*Puxando o menu da parte branca até "Meus favoritos" 035*/
+}
+
+.container__botao:checked ~ .lista-menu { /*021*/
+    display: block; /*022*/
+} /*IMPORTANTE: Maneira mais próxima de uma condicional sem precisar do JavaScript para fazer essa função*/
+
+.lista-menu__titulo, .lista-menu__item { /*026*/
+    padding: 1em; /*027*/
+    background-color: var(--branco); /*028*/
+}
+
+.lista-menu__titulo { /*030*/
+    color: var(--laranja); /*031*/
+    font-weight: 700; /*040*/
+}
+
+.lista-menu__link { /*A cor foi copiada direto do Figma, menos a parte background 033*/
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /*034*/
+}
+
+.container__botao { /*041*/
+    display: none; /*042*/
+}
+
+.container__titulo { /*180*/
+    display: none; /*181*/
+}
+
+.opcoes { /*191*/
+    display: none; /*192*/
+}
+
+.container__texto { /*272*/
+    display: none; /*273*/
+}
+
+@media screen and (min-width: 1024px) { /*MEDIA QUERY 171*/
+    .container__titulo, .container__titulo--negrito { /*173*/
+        font-family: var(--fonte-secundario); /*174*/
+        font-size: 30px; /*175*/
+        padding-left: 0.2em; /*197*/
+    }
+
+    .container__titulo { /*176*/
+        font-weight: 400; /*177*/
+        display: block; /*182*/
+    }
+
+    .container__titulo--negrito { /*178*/
+        font-weight: 700; /*179*/
+    }
+
+    .opcoes { /*182*/
+        display: flex; /*183*/
+    }
+
+    .opcoes__item { /*184*/
+        padding: 0 1em; /*185*/
+        text-transform: uppercase; /*186*/
+    }
+
+    .opcoes__link { /*187*/
+        text-decoration: none; /*188*/
+        color: var(--preto); /*190*/
+    }
+
+    .container__imagem--transparente { /*193*/
+        display: none; /*194*/
+    }
+
+    .cabecalho__menu-hamburger { /*195*/
+        display: none; /*196*/
+    }
+
+    .opcoes__botao:checked ~ .lista-menu { /*198*/
+        display: block; /*199*/
+        width: auto; /*200*/
+    }
+
+    .opcoes__botao { /*201*/
+        display: none; /*202*/
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item { /*314*/
+        background: var(--azul-degrade); /*315*/
+        color: var(--branco); /*316*/
+    }
+
+    .opcoes__item { /*317*/
+        padding: 2em 1em; /*318*/
+    }
+
+    .lista-menu__item:hover { /*319*/
+        background: var(--azul-degrade); /*320*/
+    }
+
+    .lista-menu__item:hover > .lista-menu__link { /*321*/
+        -webkit-text-fill-color: var(--branco); /*322*/
+        text-decoration: none; /*323*/
+    }
+}
+
+@media screen and (min-width: 1728px) { /*262*/
+    .container__link { /*263*/
+        display: flex; /*264*/
+        align-items: center; /*265*/
+        /*text-decoration: none; Não precisa por eu já estar com o reset 266*/
+        /*color: var(--preto); ão precisa por eu já estar com o reset 267*/
+    }
+
+    .cabecalho { /*268*/
+        padding: 0 2em; /*269*/
+    }
+
+    .opcoes { /*270*/
+        margin-right: auto; /*271*/
+    }
+
+    .container__texto { /*274*/
+        display: block; /*275*/
+    }
+}

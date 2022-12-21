@@ -1,0 +1,125 @@
+.carrossel__titulo { /*071*/
+    color: var(--laranja); /*072*/
+    background-color: var(--branco); /*073*/
+    text-align: center; /*074*/
+    text-transform: uppercase; /*075*/
+    font-size: 18px; /*076*/
+    font-weight: 700; /*077*/
+    padding: 1em 0 0.5em 0; /*078*/
+}
+
+.swiper-slide img { /*079*/
+    width: 100%; /*080*/
+}
+
+.swiper-button-prev, .swiper-button-next { /*081*/
+    display: none;  /*Removendo as setas que ficam aos lados 082*/
+}
+
+.swiper-pagination {  /*083*/
+    position: initial;  /*fazendo as bolinhas ficarem acima 084*/
+    margin: 0.5em 0; /*085*/
+}
+
+.card__descricao { /*086*/
+    display: flex; /*087*/
+    justify-content: space-between; /*Irá fazer o espaçamento entre os dois itens 088*/
+    margin-bottom: 0.5em; /*109*/
+}
+
+.card__botoes { /*089*/
+    display: flex; /*090*/
+    justify-content: space-between; /*091*/
+}
+
+.botoes {  /*092*/
+    display: flex; /*093*/
+}
+
+.card { /*094*/
+    background: var(--branco); /*095*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*096*/
+    border-radius: 10px; /*097*/
+    margin: 1em; /*098*/
+    padding: 1em; /*099*/
+}
+
+.descricao__titulo { /*100*/
+    color: var(--laranja); /*101*/
+    font-weight: 700; /*102*/
+}
+
+.descricao__titulo-livro { /*103*/
+    color: var(--azul); /*105*/
+    font-size: 18px; /*106*/
+    font-weight: 700; /*107*/
+    margin: 0.5em 0; /*108*/
+}
+
+.descricao__texto { /*109*/
+    font-size: 14px; /*110*/
+}
+
+.botoes__item { /*111*/
+    margin: 0 0.5em; /*112*/
+}
+
+.botoes__ancora { /*113*/
+    background-color: var(--laranja); /*114*/
+    padding: 1em 2.2em; /*115*/
+    color: var(--branco); /*116*/
+    font-weight: 700; /*117*/
+    text-decoration: none; /*118*/
+}
+
+@media screen and (min-width: 1024px) { /*210*/
+    .carrossel__titulo { /*211*/
+        font-size: 26px; /*212*/
+    }
+
+    .swiper-pagination { /*213*/
+        margin: 2em 0 3em 0; /*214*/
+    }
+
+    .swiper { /*215*/
+        width: 50%; /*216*/
+    }
+
+    .swiper-button-prev, .swiper-button-next { /*217*/
+        display: block; /*218*/
+        top: 35%; /*219*/
+    }
+
+    .card { /*220*/
+        width: 90%; /*221*/
+        margin: 2em auto; /*222*/
+    }
+}
+
+/*@media screen and (min-width: 1728px) { 283
+    .carrossel__container { 284
+        display: flex; 285
+        margin: 0 20vw 3em 20vw; 286
+        align-items: center; 287
+    }
+
+    .swiper-pagination { 288
+        margin: 1em 0; 289
+    }
+
+    .descricao__titulo { 290
+        font-size: 32px; 291
+    }
+
+    .descricao__texto { 292
+        font-size: 16px; 293
+    }
+
+    .descricao { 294
+        margin-right: 2em; 295
+    }
+
+    .card { 296
+        width: 100%; 297
+    }
+}*/

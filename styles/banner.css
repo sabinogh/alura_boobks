@@ -1,0 +1,63 @@
+.banner { /*044*/
+    background: var(--azul-degrade); /*045*/
+    color: var(--branco); /*046*/
+    text-align: center; /*047*/
+    padding: 2.5em 2em; /*053*/
+}
+
+.banner__titulo { /*048*/
+    font-size: 18px; /*049*/
+    font-weight: 700; /*050*/
+}
+
+.banner__texto { /*051*/
+    font-weight: 500; /*052*/
+    margin: 1em 0; /*054*/
+}
+
+.banner__pesquisa { /*055*/
+    background-color: transparent; /*056*/
+    border: 1px solid var(--branco); /*057*/
+    color: var(--branco); /*058*/
+    border-radius: 24px; /*059*/
+    padding: 1em; /*060*/
+    width: 100%; /*061*/
+}
+
+.banner__pesquisa::placeholder { /*062*/
+    font-family: var(--fonte-principal); /*063*/
+    font-size: 14px; /*064*/
+    font-weight: 400; /*065*/
+    text-align: center; /*066*/
+    color: var(--branco); /*067*/
+    background: url("../img/Pesquisa.svg") no-repeat; /*A imagem sem ficar repetindo várias vezes 068*/
+    background-position: 0em; /*Eu achei melhor deixar em 0 mesmo 069*/
+}
+
+@media screen and (min-width: 1024px) { /*203*/
+    .banner__titulo { /*204*/
+        font-size: 36px; /*205*/
+    }
+
+    .banner__pesquisa { /*206*/
+        width: 50%; /*207*/
+    }
+
+    .banner__pesquisa::placeholder { /*208*/
+        background-position: 6em; /*209*/
+    }
+}
+
+@media screen and (min-width: 1728px) { /*276*/
+    .banner__pesquisa { /*277*/
+        width: 30%; /*278*/
+    }
+
+    .banner__pesquisa::placeholder { /*279*/
+        background-position: 9em; /*280*/
+    }
+
+    .banner { /*281*/
+        padding: 5em 0; /*282*/
+    }
+}
